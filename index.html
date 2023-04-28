@@ -6,25 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
     <title>Restaurant prices comparator</title>
   </head>
   <body>
-    <!--Particles.js container-->
-    
-    
-    <div class="container">
-      <div id="particles-js"></div>
-      <h1>Where should I eat?</h1>
-
-    <h2 id="date"></h2>
-     <button id="local" class="btn">Choose restaurant</button>
-    <h3 id="restaurant"></h3>
-    <h3 id="expensive"></h3>
-    <h2 id="winner"></h2>
-    </div>
-  
+    <div id="particles-js"></div>
+      <nav class="logo">
+        <a href="https://ro.linkedin.com/in/eric-kelerman-34672a195" target="_blank">Eric K.</a>
+        </nav> 
+      <div class="card">
+          <label>Enter your name:</label>
+        <input type="text" id="name" name="name" placeholder="your name...">
+        <h1>Where should I eat?</h1>
+        <h2 id="date"></h2>
+        <div class="btn-2"><button id ="local" class="btn" role="button"><span class="text">Chose</span><span>Your choise⬇</span></button></div>
+        <h3 id="restaurant"></h3>
+        <h3 id="expensive"></h3>
+        <h2 id="winner"></h2>
+      </div>
+      <footer>
+        <p>&copy; Eric Kelerman 2023</p>
+      </footer>
+   
   </body>
   <script src="./date.js"></script>
   <script src="./Restaurant.js"></script>

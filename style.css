@@ -1,86 +1,274 @@
+
+
+/* Set margin and padding of body to 0 */
 body {
   margin: 0;
   padding: 0;
 }
 
-h1 {
-  color: rgb(0, 0, 0);
-  text-align: center;
-  margin-bottom: 1rem;
+/* NavBar style*/
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px white;
+  padding-left: 1.5rem;
+  padding-right: 2rem;
 }
 
-h2 {
-  color: rgb(0, 0, 0);
-  text-align: center;
-  margin-bottom: 1rem;
+.logo a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: fit-content;
 }
 
+.logo a {
+  color: #f6f6f6;
+}
+
+/* Style headings */
+h1, h2, h3 {
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 0 black;
+  
+}
+
+/* Style restaurant heading */
 #restaurant {
   color: rgb(255, 255, 255);
-  text-align: center;
   margin-top: 1.5rem;
   margin-bottom: -1rem;
   text-shadow: 0 1px 0 black;
 }
 
+/* Style expensive heading */
 #expensive {
   color: rgba(253, 21, 21, 0.913);
-  text-align: center;
   margin-top: -1rem;
   text-shadow: 0 1px 0 black;
 }
 
+/* Style winner heading */
 #winner {
   color: rgb(12, 229, 12);
-  text-align: center;
   margin-top: 1rem;
   text-shadow: 0 1px 0 black;
 }
 
+/* Style particles.js background */
 #particles-js {
-  position: fixed;
+  position:fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(4, 130, 132);
-  background: linear-gradient(0deg, rgb(3, 142, 201) 0%, rgb(96, 106, 248) 100%);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(to bottom, #002147, #66c2ff, #b0c4de, #a29e9e);
   z-index: -1;
   
 }
 
+/* Style button */
 .btn {
-  align-items: center;
-  background: linear-gradient(rgb(219, 217, 217), rgb(54, 92, 196));
-  border: none;
-  border-radius: 25px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-  color: black;
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.btn:active {
-  background-color: rgb(54, 92, 196);
-  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.2);
-  transform: translateY(3px);
-}
-
-.btn:hover {
-  background-color: rgb(54, 92, 196);
-  color: white;
-}
-
-.container {
   position: relative;
-  height: 100%;
-  overflow: auto;
-  font-family: 'Castoro Titling', cursive;
-  font-weight: bold;
- }
+  overflow: hidden;
+  border: 1px solid #18181a;
+  color: #18181a;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background: #fff;
+  user-select: none;
+  touch-action: manipulation;
+}
+.btn-2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.btn span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.btn span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.btn:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.btn:hover span:last-child {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+/* Style footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Style footer logo */
+footer img {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Style footer copyright text */
+footer p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+/* Style card container */
+
+.card {
+  margin: 2rem auto;
+  padding: 1rem;
+  position: relative;
+  padding-bottom: 10px;
+  width: fit-content;
+}
+/* Label input and text style */
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #f6f6f6;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+input[type="text"]
+{
+  margin: auto;
+  display: flex;
+  width: 75%;
+  justify-content: center;
+  padding: 0.2rem;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  
+}
+
+
+/* Label input and text style done! */
+ /* Extra small devices (phones) */
+@media only screen and (max-width: 576px) {
+  .logo {
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .card {
+    max-width: 100%;
+    align-content: center;
+
+  }
+  
+  /* Add more styles as needed */
+}
+
+/* Small devices (tablets) */
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .logo {
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .card {
+    max-width: 100%;
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+  
+  /* Add more styles as needed */
+}
+
+/* Medium devices (desktops) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .logo {
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+  }
+  
+  .card {
+    max-width: 80%;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  /* Add more styles as needed */
+}
+
+/* Large devices (large desktops) */
+@media only screen and (min-width: 992px) {
+  .logo {
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+  }
+  
+  .card {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  /* Add more styles as needed */
+}
